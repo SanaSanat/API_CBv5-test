@@ -8,5 +8,5 @@ before(async () => {
 
   process.env.TOKEN = response.body.payload.token
 
-  console.log(process.env.TOKEN)
+  //console.log(process.env.TOKEN)
 })
