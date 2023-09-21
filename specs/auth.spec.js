@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import 'dotenv/config'
+//import 'dotenv/config'
 import { login } from '../helpers/general-helper'
 
 describe('Authentication', () => {
