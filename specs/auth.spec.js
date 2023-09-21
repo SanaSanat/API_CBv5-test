@@ -1,5 +1,4 @@
 import { expect } from 'chai'
-import request from 'supertest'
 import 'dotenv/config'
 import { login } from '../helpers/general-helper'
 
