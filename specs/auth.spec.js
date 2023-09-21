@@ -26,9 +26,7 @@ describe('Authentication', () => {
   describe('Auth with invalid credentials', () => {
     let res
     before(async () => {
-      res = await request(process.env.BASE_URL)
-        .post('/user/login')
-        .send({ email: 'invalid', password: 'invalid' })
+      res = await login('invalid', 'invalid')
     })
 
     it('validate status code', async () => {
