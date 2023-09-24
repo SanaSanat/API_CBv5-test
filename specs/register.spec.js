@@ -6,7 +6,7 @@ const chance = require('chance').Chance()
 describe('Create a user with valid credentials', () => {
   let res
   const newEmail = 'user_' + Date.now() + '@pirate.com'
-  console.log(newEmail)
+
   before(async () => {
     res = await register(
       chance.first(),
