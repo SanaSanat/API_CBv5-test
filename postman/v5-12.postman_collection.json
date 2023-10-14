@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "59e6260f-d894-473f-a8ed-0613bc69a60c",
+		"name": "v5/12",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24730189"
+	},
+	"item": [
+		{
+			"name": "POST User/Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set('token', pm.response.json().token)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1c2luZXNzc0Bvd25lci5jb20iLCJ1c2VySWQiOiI2NDNjNWMwNjRhYjY3MjgyMDMzNDk0ODgiLCJpYXQiOjE2ODE2ODc1MTksImV4cCI6MTY4MjU1MTUxOX0.Oft1WbAXWwvPVOru6vZLDgUX_htB1bDHZBrmjg_Zh8o",
+						"description": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1c2luZXNzc0Bvd25lci5jb20iLCJ1c2VySWQiOiI2NDNjNWMwNjRhYjY3MjgyMDMzNDk0ODgiLCJpYXQiOjE2ODE2ODc1MTksImV4cCI6MTY4MjU1MTUxOX0.Oft1WbAXWwvPVOru6vZLDgUX_htB1bDHZBrmjg_Zh8o",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"businesss@owner.com\",\r\n    \"password\": \"123123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}user/login",
+					"host": [
+						"{{host}}user"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST User/Login neg_trimmer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set('token', pm.response.json().token)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1c2luZXNzc0Bvd25lci5jb20iLCJ1c2VySWQiOiI2NDNjNWMwNjRhYjY3MjgyMDMzNDk0ODgiLCJpYXQiOjE2ODE2ODc1MTksImV4cCI6MTY4MjU1MTUxOX0.Oft1WbAXWwvPVOru6vZLDgUX_htB1bDHZBrmjg_Zh8o",
+						"description": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1c2luZXNzc0Bvd25lci5jb20iLCJ1c2VySWQiOiI2NDNjNWMwNjRhYjY3MjgyMDMzNDk0ODgiLCJpYXQiOjE2ODE2ODc1MTksImV4cCI6MTY4MjU1MTUxOX0.Oft1WbAXWwvPVOru6vZLDgUX_htB1bDHZBrmjg_Zh8o",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"    businesss@owner.com\",\r\n    \"password\": \"123123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}user/login",
+					"host": [
+						"{{host}}user"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1c2luZXNzc0Bvd25lci5jb20iLCJ1c2VySWQiOiI2NDNjNWMwNjRhYjY3MjgyMDMzNDk0ODgiLCJpYXQiOjE2ODIwNDUwMjQsImV4cCI6MTY4MjkwOTAyNH0.i23aZ7IQuaPnYDdY9FTu90sgReFW5QjkJ1gnhmRQpPI",
+						"description": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1c2luZXNzc0Bvd25lci5jb20iLCJ1c2VySWQiOiI2NDNjNWMwNjRhYjY3MjgyMDMzNDk0ODgiLCJpYXQiOjE2ODIwNDUwMjQsImV4cCI6MTY4MjkwOTAyNH0.i23aZ7IQuaPnYDdY9FTu90sgReFW5QjkJ1gnhmRQpPI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"business@owner.com\",\r\n    \"name\": \"Alice\",\r\n    \"phone\": \"6768994321\",\r\n    \"description\": \"wow!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}client",
+					"host": [
+						"{{host}}client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET by ID Client",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1c2luZXNzc0Bvd25lci5jb20iLCJ1c2VySWQiOiI2NDNjNWMwNjRhYjY3MjgyMDMzNDk0ODgiLCJpYXQiOjE2ODIwNDUwMjQsImV4cCI6MTY4MjkwOTAyNH0.i23aZ7IQuaPnYDdY9FTu90sgReFW5QjkJ1gnhmRQpPI",
+						"description": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1c2luZXNzc0Bvd25lci5jb20iLCJ1c2VySWQiOiI2NDNjNWMwNjRhYjY3MjgyMDMzNDk0ODgiLCJpYXQiOjE2ODIwNDUwMjQsImV4cCI6MTY4MjkwOTAyNH0.i23aZ7IQuaPnYDdY9FTu90sgReFW5QjkJ1gnhmRQpPI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}client/643e410f919cd8c1d939e506",
+					"host": [
+						"{{host}}client"
+					],
+					"path": [
+						"643e410f919cd8c1d939e506"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH Update",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"description": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Alice\",\r\n    \"phone\": \"9794562345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}client/643e410f919cd8c1d939e506",
+					"host": [
+						"{{host}}client"
+					],
+					"path": [
+						"643e410f919cd8c1d939e506"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL Client",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"description": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}client/643e410f919cd8c1d939e506",
+					"host": [
+						"{{host}}client"
+					],
+					"path": [
+						"643e410f919cd8c1d939e506"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Get All",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"description": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}client/search",
+					"host": [
+						"{{host}}client"
+					],
+					"path": [
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

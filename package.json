@@ -4,8 +4,9 @@
   "description": "simple api automation tests",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --config .mocharc.js"
-  },
+   "test": "mocha --config .mocharc.js",
+    "pmrun": "newman run postman/v5-12.postman_collection.json -e postman/v5-12.postman_environment.json"
+    },
   "keywords": [],
   "author": "SanaZh",
   "license": "ISC",
@@ -23,3 +24,4 @@
     "supertest": "^6.3.3"
   }
 }
+
