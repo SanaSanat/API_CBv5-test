@@ -1,12 +1,12 @@
 import { expect } from 'chai'
-import { createClient } from '../helpers/client-helper'
+import * as clientHelper from '../helpers/client-helper'
 
 describe('Client test', () => {
   describe('Create client', () => {
     let res
 
     before(async () => {
-      res = await createClient()
+      res = await clientHelper.create()
     })
 
     it('verify status code', () => {
@@ -22,7 +22,7 @@ describe('Client test', () => {
     let res
 
     before(async () => {
-      res = await getAllClient()
+      res = await clientHelper.getAll()
     })
 
     it('verify status code', () => {
@@ -31,6 +31,42 @@ describe('Client test', () => {
 
     it('verify response message', async () => {
       expect(res.body.message).to.eq('ClientSearch ok')
+    })
+  })
+
+  describe('Get id client', () => {
+    let res
+    let clientId
+
+    before(async () => {
+      clientId = (await clientHelper.create()).body.payload
+      res = await clientHelper.getAllId(clientId)
+    })
+
+    it('verify status code', () => {
+      expect(res.statusCode).to.eq(200)
+    })
+
+    it('verify response message', async () => {
+      expect(res.body.message).to.eq('Get Client by id ok')
+    })
+  })
+
+  describe('Delete client', () => {
+    let res
+    let clientId
+
+    before(async () => {
+      clientId = (await clientHelper.create()).body.payload
+      res = await clientHelper.deleteClient(clientId)
+    })
+
+    it('verify status code', () => {
+      expect(res.statusCode).to.eq(200)
+    })
+
+    it('verify response message', async () => {
+      expect(res.body.message).to.eq('Client deleted')
     })
   })
 })
