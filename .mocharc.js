@@ -13,3 +13,5 @@ module.exports = {
     'reportFilename=[status]_[datetime]_ReportName',
   ],
 }
+
+///"auth-test": "mocha --spec specs/auth.spec.js",
