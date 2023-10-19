@@ -18,5 +18,7 @@ describe('Verify email and password', () => {
     expect(res.statusCode).to.eq(200)
     const email = res.body.payload.user.email
     expect(email).to.eq(email.trim())
+
+    //console.log(res.body)
   })
 })
