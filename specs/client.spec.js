@@ -34,7 +34,7 @@ describe('Client test', () => {
     })
   })
 
-  describe('Get id client', () => {
+  describe('Get client by id', () => {
     let res
     let clientId
 
