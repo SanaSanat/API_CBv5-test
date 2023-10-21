@@ -1,5 +1,4 @@
 import request from 'supertest'
-const chance = require('chance').Chance()
 
 function createVendor() {
   return request(process.env.BASE_URL)
